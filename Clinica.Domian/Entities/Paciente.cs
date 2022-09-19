@@ -8,9 +8,9 @@ namespace Clinica.Domian.Entities
     public class Paciente
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public DateTime dtnascimento { get; set; }
-        public char  sexo { get; set; }
-        public string  prontuario { get; set; }
+//public string Nome { get; set; }
+        public DateTime Dtnascimento { get; set; }
+        public char  Sexo { get; set; }
+        
     }
 }

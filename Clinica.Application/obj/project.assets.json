@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Clinica.Domian/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Clinica.Domian.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Clinica.Domian.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Clinica.Domian/1.0.0": {
+      "type": "project",
+      "path": "../Clinica.Domian/Clinica.Domian.csproj",
+      "msbuildProject": "../Clinica.Domian/Clinica.Domian.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Clinica.Domian >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Ismael Correia\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Ismael Correia\\Documents\\projetos\\net\\Clinica\\Clinica.Domian\\Clinica.Domian.csproj": {
+              "projectPath": "C:\\Users\\Ismael Correia\\Documents\\projetos\\net\\Clinica\\Clinica.Domian\\Clinica.Domian.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

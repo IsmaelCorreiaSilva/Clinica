@@ -1,12 +1,13 @@
 using Microsoft.EntityFrameworkCore;
-using Store.Domian.Entities;
+using Clinica.Domian.Entities;
 
 namespace Clinica.Infra.Data.Context
 {
-    public class ApplicationDbContext
+    public class ApplicationDbContext : DbContext
     {
-        public DbSet<Produto> Produtos {get; set;}
-        public ApplicationDbContext(DbContextOptions options):base(options){
+        public DbSet<Especialidade> Especialidades {get; set;}
+        public ApplicationDbContext(DbContextOptions options) : base(options)
+        {
 
         }
     }
