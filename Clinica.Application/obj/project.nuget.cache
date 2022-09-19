@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "DyDvTT0hK1/zGH7uEFpdIyur2ej5hD2fnv2fCgwXw95AixK960ITJv0is1Dx/H6gp4tnhQAxbVtDErDVI+eJmg==",
+  "dgSpecHash": "iyuMUUcAfMNNmAbXS2+pXMl6Q38oVO9C5MBSkEJIT6jRwX2mds16kp4ABcOwFkHO8owyaEjeS+g69nEESMSIww==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ismael Correia\\Documents\\projetos\\net\\Clinica\\Clinica.Application\\Clinica.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Ismael Correia\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\Ismael Correia\\.nuget\\packages\\fluentvalidation\\11.2.2\\fluentvalidation.11.2.2.nupkg.sha512",
+    "C:\\Users\\Ismael Correia\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

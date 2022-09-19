@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "/IgniqT11ZdfxCaoRXDr83Y7KoaD4t9tPxzFEDn+ntMUlYmKV4pyXnTlIE0lDLV0WMHl0BYxCncsY30dSVxL+w==",
+  "dgSpecHash": "hVFfBRU+5//TmuYJdKN0xe6hpQECzSdJPh6t0nwKmGxvUeUd8NzDLkB7TpDzw9ijDwyitxANIuaKxWT4j/XRvQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ismael Correia\\Documents\\projetos\\net\\Clinica\\Clinica.Infra.Data\\Clinica.Infra.Data.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Ismael Correia\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Ismael Correia\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\Ismael Correia\\.nuget\\packages\\fluentvalidation\\11.2.2\\fluentvalidation.11.2.2.nupkg.sha512",
+    "C:\\Users\\Ismael Correia\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Ismael Correia\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\Ismael Correia\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\Ismael Correia\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.9\\microsoft.entityframeworkcore.6.0.9.nupkg.sha512",

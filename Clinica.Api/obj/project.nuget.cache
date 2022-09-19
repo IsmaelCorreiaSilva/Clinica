@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "BkSiCUDeDbPHiW3oRiiyBJCVIb+bkg4R1C/N26R1p4UOuBfy7Wu9fc2HTMxwDcC6PD0AI3cppXAVaahpr6oHpA==",
+  "dgSpecHash": "uSBkmZX/pv2Dn8En2JIOxpOAdpCUY6K0KydSme3mKrVEUuDNdvIqKxSK0VxTthlnH0YNiIk5xZqmR8oiQpwY1A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ismael Correia\\Documents\\projetos\\net\\Clinica\\Clinica.Api\\Clinica.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ismael Correia\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\Ismael Correia\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\Ismael Correia\\.nuget\\packages\\fluentvalidation\\11.2.2\\fluentvalidation.11.2.2.nupkg.sha512",
     "C:\\Users\\Ismael Correia\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\Ismael Correia\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Ismael Correia\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Ismael Correia\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\Ismael Correia\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\Ismael Correia\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.9\\microsoft.entityframeworkcore.6.0.9.nupkg.sha512",

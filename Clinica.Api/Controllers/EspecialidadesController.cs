@@ -8,30 +8,42 @@ namespace Clinica.Api.Controllers
     [Route("[controller]")]
     public class EspecialidadesController: ControllerBase
     {
-        private readonly IEspecialidadeService service;
-        public EspecialidadesController(IEspecialidadeService service)
+        private readonly IEspecialidadeService especialidadeService;
+        public EspecialidadesController(IEspecialidadeService especialidadeService)
         {
-            this.service = service;
+            this.especialidadeService = especialidadeService;
         }
         [HttpGet("{id}")]
-        public async Task<ActionResult> Get(int id){
-            return Ok(await service.GetEspecialidadeAsync(id));
+        public async Task<ActionResult> Get(int id)
+        {
+            return Ok(await especialidadeService.GetEspecialidadeAsync(id));
         }
         [HttpGet]
-        public async Task<ActionResult> Get(){
-            return Ok(await service.GetEspecialidadesAsync());
+        public async Task<ActionResult> Get()
+        {
+            return Ok(await especialidadeService.GetEspecialidadesAsync());
         }
         [HttpPost]
-        public void Post([FromBody] string dados){
-
+        public async Task<ActionResult> Post(Especialidade especialidade)
+        {
+            var especialidadeInserida = await especialidadeService.InsertEspecialidadeAsync(especialidade);
+            return CreatedAtAction(nameof(Get), new { id = especialidade.Id }, especialidade);
         }
-        [HttpPut("{id}")]
-        public void Put(){
-
+        [HttpPut]
+        public async Task<ActionResult>  Put(Especialidade especialidade)
+        {
+            var especialidadeAtualizada = await especialidadeService.UpdateEspecialidadeAsync(especialidade);
+            if(especialidadeAtualizada == null)
+            {
+                return NotFound();
+            }
+            return Ok(especialidadeAtualizada);
         }
         [HttpDelete("{id}")]
-        public void Delete(){
-
+        public async Task<ActionResult> Delete(int id)
+        {
+            await especialidadeService.DeleteEspecialidadeAsync(id);
+            return NoContent();
         }
 
     }

@@ -11,5 +11,8 @@ namespace Clinica.Domian.Interfaces
     {
         Task<IEnumerable<Especialidade>> GetEspecialidadesAsync();
         Task<Especialidade> GetEspecialidadeAsync(int id);
+        Task<Especialidade> InsertEspecialidadeAsync(Especialidade  especialidade);
+        Task<Especialidade> UpdateEspecialidadeAsync(Especialidade especialidade);
+        Task DeleteEspecialidadeAsync(int id);
     }
 }

@@ -6,19 +6,35 @@ namespace Clinica.Application.Services
 {
     public class EspecialidadeService : IEspecialidadeService
     {
-        private readonly IEspecialidadeRepository repository;
-        public EspecialidadeService(IEspecialidadeRepository repository)
+        private readonly IEspecialidadeRepository especialidadeRepository;
+        public EspecialidadeService(IEspecialidadeRepository especialidadeRepository)
         {
-            this.repository = repository;
+            this.especialidadeRepository = especialidadeRepository;
         }
+
+        public async Task DeleteEspecialidadeAsync(int id)
+        {
+            await especialidadeRepository.DeleteEspecialidadeAsync(id);
+        }
+
         public async Task<Especialidade> GetEspecialidadeAsync(int id)
         {
-            return await repository.GetEspecialidadeAsync(id);
+            return await especialidadeRepository.GetEspecialidadeAsync(id);
         }
 
         public async Task<IEnumerable<Especialidade>> GetEspecialidadesAsync()
         {
-            return await repository.GetEspecialidadesAsync();
+            return await especialidadeRepository.GetEspecialidadesAsync();
+        }
+
+        public async Task<Especialidade> InsertEspecialidadeAsync(Especialidade especialidade)
+        {
+            return await especialidadeRepository.InsertEspecialidadeAsync(especialidade);
+        }
+
+        public async Task<Especialidade> UpdateEspecialidadeAsync(Especialidade especialidade)
+        {
+            return await especialidadeRepository.UpdateEspecialidadeAsync(especialidade);
         }
     }
 }
