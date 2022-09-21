@@ -30,14 +30,15 @@ namespace Clinica.Application.Services
             return await pacienteRepository.GetPacientesAsync();
         }
 
-        public async Task<Paciente> InsertPacienteAsync(PacienteNovoViewModel pacienteNovo)
+        public async Task<Paciente> InsertPacienteAsync(NovoPacienteViewModel pacienteNovo)
         {
             var paciente = mapper.Map<Paciente>(pacienteNovo);
             return await pacienteRepository.InsertPacienteAsync(paciente);
         }
 
-        public async Task<Paciente> UpdatePacienteAsync(Paciente paciente)
+        public async Task<Paciente> UpdatePacienteAsync(AlteraPacienteViewModel alteraPaciente)
         {
+            var paciente = mapper.Map<Paciente>(alteraPaciente);
             return await pacienteRepository.UpdatePacienteAsync(paciente);
         }
     }

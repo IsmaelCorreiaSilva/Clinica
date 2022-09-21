@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Clinica.Application.ViewModel
 {
-    internal class EspecialidadeViewModel
+    public class NovoEspecialidadeViewModel
     {
+        public string Nome { get; set; }
+        public string Descricao { get; set; }
     }
 }

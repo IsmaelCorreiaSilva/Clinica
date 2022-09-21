@@ -4,9 +4,9 @@ using FluentValidation;
 
 namespace Clinica.Application.Validator
 {
-    public class PacienteNovoValidator : AbstractValidator<PacienteNovoViewModel>
+    public class NovoPacienteValidator : AbstractValidator<NovoPacienteViewModel>
     {
-        public PacienteNovoValidator()
+        public NovoPacienteValidator()
         {
             RuleFor(x => x.Nome).NotNull().NotEmpty().MinimumLength(10).MaximumLength(50);
             RuleFor(x => x.DataNascimento).NotNull().NotEmpty().LessThan(DateTime.Now).GreaterThan(DateTime.Now.AddYears(-130));

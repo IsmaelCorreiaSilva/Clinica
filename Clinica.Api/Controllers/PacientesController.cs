@@ -11,13 +11,12 @@ namespace Clinica.Api.Controllers
     public class PacientesController : ControllerBase
     {
         private readonly IPacienteService pacienteService;
-        private readonly IValidator<PacienteNovoViewModel> validator;
-        public PacientesController(IPacienteService pacienteService, IValidator<PacienteNovoViewModel> validator)
+
+        public PacientesController(IPacienteService pacienteService)
         {
             this.pacienteService = pacienteService;
-            this.validator = validator;
-
         }
+
 
         [HttpGet]
         public async Task<ActionResult> Get()
@@ -30,7 +29,7 @@ namespace Clinica.Api.Controllers
             return Ok(await pacienteService.GetPacienteAsync(id));
         }
         [HttpPost]
-        public async Task<ActionResult> Post(PacienteNovoViewModel novoPaciente)
+        public async Task<ActionResult> Post(NovoPacienteViewModel novoPaciente)
         {
             var pacienteInserido = await pacienteService.InsertPacienteAsync(novoPaciente);
             return CreatedAtAction(nameof(Get), new { id = pacienteInserido.Id }, pacienteInserido);
@@ -46,9 +45,9 @@ namespace Clinica.Api.Controllers
             //}
         }
         [HttpPut]
-        public async Task<ActionResult> Put(Paciente paciente)
+        public async Task<ActionResult> Put(AlteraPacienteViewModel alteraPaciente)
         {
-            var pacienteAtualizado = await pacienteService.UpdatePacienteAsync(paciente);
+            var pacienteAtualizado = await pacienteService.UpdatePacienteAsync(alteraPaciente);
             if (pacienteAtualizado == null)
                 return NotFound();
 

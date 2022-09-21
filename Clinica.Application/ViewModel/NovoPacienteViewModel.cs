@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Clinica.Application.ViewModel
 {
-    public class PacienteNovoViewModel
+    public class NovoPacienteViewModel
     {
         public string Nome { get; set; }
         public string Cpf { get; set; }

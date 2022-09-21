@@ -12,8 +12,8 @@ namespace Clinica.Application.Interfaces
     {
         Task<IEnumerable<Paciente>> GetPacientesAsync();
         Task<Paciente> GetPacienteAsync(int id);
-        Task<Paciente> InsertPacienteAsync(PacienteNovoViewModel paciente);
-        Task<Paciente> UpdatePacienteAsync(Paciente paciente);
+        Task<Paciente> InsertPacienteAsync(NovoPacienteViewModel paciente);
+        Task<Paciente> UpdatePacienteAsync(AlteraPacienteViewModel paciente);
         Task DeletePacienteAsync(int id);
     }
 }
