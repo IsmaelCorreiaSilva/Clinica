@@ -5,6 +5,7 @@ namespace Clinica.Api.Configuration
     {
         public static void AddFluentValidationConfiguration(this IServiceCollection services)
         {
+
             //services.AddControllers().AddFluentValidation(fv =>
             //{
             //    fv.RegisterValidatorsFromAssemblyContaining<ProdutoValidator>();

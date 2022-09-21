@@ -11,10 +11,14 @@ namespace Clinica.Api.Controllers
     public class PacientesController : ControllerBase
     {
         private readonly IPacienteService pacienteService;
-
-        public PacientesController(IPacienteService pacienteService)
+        private readonly IValidator<NovoPacienteViewModel> validatorNovo;
+        private readonly IValidator<AlteraPacienteViewModel> validatorAltera;
+        public PacientesController(IPacienteService pacienteService, IValidator<NovoPacienteViewModel> validatorNovo,
+            IValidator<AlteraPacienteViewModel> validatorAltera)
         {
             this.pacienteService = pacienteService;
+            this.validatorNovo = validatorNovo;
+            this.validatorAltera = validatorAltera;
         }
 
 
@@ -31,18 +35,18 @@ namespace Clinica.Api.Controllers
         [HttpPost]
         public async Task<ActionResult> Post(NovoPacienteViewModel novoPaciente)
         {
-            var pacienteInserido = await pacienteService.InsertPacienteAsync(novoPaciente);
-            return CreatedAtAction(nameof(Get), new { id = pacienteInserido.Id }, pacienteInserido);
-            //var validacao = await validator.ValidateAsync(novoPaciente);
-            //if (validacao.IsValid)
-            //{ 
-            //    var pacienteInserido = await pacienteService.InsertPacienteAsync(novoPaciente);
-            //    return CreatedAtAction(nameof(Get), new { id = pacienteInserido.Id }, pacienteInserido);
-            //}
-            //else
-            //{
-            //    return BadRequest(validacao.ToString());
-            //}
+            //var pacienteInserido = await pacienteService.InsertPacienteAsync(novoPaciente);
+            //return CreatedAtAction(nameof(Get), new { id = pacienteInserido.Id }, pacienteInserido);
+            var validacao = await validatorNovo.ValidateAsync(novoPaciente);
+            if (validacao.IsValid)
+            {
+                var pacienteInserido = await pacienteService.InsertPacienteAsync(novoPaciente);
+                return CreatedAtAction(nameof(Get), new { id = pacienteInserido.Id }, pacienteInserido);
+            }
+            else
+            {
+                return BadRequest(validacao.ToString());
+            }
         }
         [HttpPut]
         public async Task<ActionResult> Put(AlteraPacienteViewModel alteraPaciente)
