@@ -1,4 +1,5 @@
-﻿using Clinica.Domian.Entities;
+﻿using Clinica.Application.ViewModel;
+using Clinica.Domian.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,8 @@ namespace Clinica.Application.Interfaces
     {
         Task<IEnumerable<Especialidade>> GetEspecialidadesAsync();
         Task<Especialidade> GetEspecialidadeAsync(int id);
-        Task<Especialidade> InsertEspecialidadeAsync(Especialidade especialidade);
-        Task<Especialidade> UpdateEspecialidadeAsync(Especialidade especialidade);
+        Task<Especialidade> InsertEspecialidadeAsync(NovoEspecialidadeViewModel especialidade);
+        Task<Especialidade> UpdateEspecialidadeAsync(AlteraEspecialidadeViewModel especialidade);
         Task DeleteEspecialidadeAsync(int id);
     }
 

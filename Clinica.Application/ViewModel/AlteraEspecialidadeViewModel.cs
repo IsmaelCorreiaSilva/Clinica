@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Clinica.Application.ViewModel
 {
-    internal class AlteraEspecialidadeViewModel
+    public class AlteraEspecialidadeViewModel: NovoEspecialidadeViewModel
     {
+        public int Id { get; set; }
     }
 }

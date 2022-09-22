@@ -10,7 +10,9 @@ namespace  Clinica.Api.Configuration
         {
             services.AddAutoMapper(
                 typeof(NovoPacienteViewModel), 
-                typeof(AlteraPacienteViewModel)
+                typeof(AlteraPacienteViewModel),
+                typeof(NovoEspecialidadeViewModel),
+                typeof(AlteraEspecialidadeViewModel)
             );
         }
     }

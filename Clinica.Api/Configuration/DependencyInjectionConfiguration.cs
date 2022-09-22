@@ -13,12 +13,20 @@ namespace Clinica.Api.Configuration
     {
         public static void AddDependencyInjectionConfiguration(this IServiceCollection services)
         {
+            //Repositories
             services.AddScoped<IPacienteRepository, PacienteRepository>();
-            services.AddScoped<IPacienteService, PacienteService>();
             services.AddScoped<IEspecialidadeRepository, EspecialidadeRepository>();
+
+            //Services
+            services.AddScoped<IPacienteService, PacienteService>();
             services.AddScoped<IEspecialidadeService, EspecialidadeService>();
+
+
+            //Fluent Validation
             services.AddScoped<IValidator<AlteraPacienteViewModel>, AlteraPacienteValidator>();
             services.AddScoped<IValidator<NovoPacienteViewModel>, NovoPacienteValidator>();
+            services.AddScoped<IValidator<AlteraEspecialidadeViewModel>, AlteraEspecialidadeValidator>();
+            services.AddScoped<IValidator<NovoEspecialidadeViewModel>, NovoEspecialidadeValidator>();
 
         }
     }
