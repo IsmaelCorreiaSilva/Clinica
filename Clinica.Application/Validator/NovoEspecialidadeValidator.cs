@@ -12,7 +12,7 @@ namespace Clinica.Application.Validator
     {
         public NovoEspecialidadeValidator()
         {
-            RuleFor(c => c.Nome).NotNull().NotEmpty().MaximumLength(5).MaximumLength(20);
+            RuleFor(c => c.Nome).NotNull().NotEmpty().MinimumLength(5).MaximumLength(20);
             RuleFor(c => c.Descricao).NotNull().NotEmpty().MinimumLength(10).MaximumLength(100);
         }
     }
